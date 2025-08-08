@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+}
+h1{
+    text-align:center;
+    font-size:5rem;
+    color:indigo;
+}
+.color-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    gap:10px;
+}
+button{
+    width:12vw;
+    height:10vh;
+    font-size:2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;;
+}
+.purple{
+    background-color: purple;
+    color: white;
+}
+.green{
+    background-color: green;
+    color: white;
+}
+.red{
+    background-color: red;
+    color: white;
+}
+button:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+    margin-top:0;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size:5rem;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+
+}
+.red-c{
+    color: red;
+    font-size: 3rem;
+    display:none;
+}
+.yellow-c{
+    color: yellow;
+    font-size: 3rem;
+    display:none;
+}
+.green-c{
+    color: green;
+    font-size: 3rem;
+    display:none;
+}
+.traffic-pole{
+    width:12vw;
+    height:60vh;
+    border:2px solid white;
+    /* margin:5% auto; */
+    border-radius:10px;
+    background-color: grey;
+}
+.light{
+    width:60px;
+    height:60px;
+    border-radius:100%;
+    padding:20px;
+    margin:28px auto;
+    background-color: black;
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    
+}
+button{
+    font-size:40px;
+    background-color: grey;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}

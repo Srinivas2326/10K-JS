@@ -1,0 +1,34 @@
+body{
+    background-color:black;
+    color:white;
+}
+.login-container{
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top:10%;
+    text-align:center;
+    display:none;
+}
+input,button{
+    margin:3%
+}
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+h3{
+    text-align:end;
+    margin-right:2%;
+}
+#close{
+    text-align:end;
+    margin-top:0;
+}

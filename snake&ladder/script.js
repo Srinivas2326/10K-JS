@@ -25,7 +25,7 @@ for(let i=0; i<=3; i++){
     btn.classList="player-btn"
     btn.textContent = players[i].name +" " + players[i].score
     btn.style.backgroundColor=players[i].color
-    // document.body.appendChild(btn)
+    document.body.appendChild(btn)
     btn.onclick=function(){
         let randomNumber = Math.random()*6
         randomNumber = Math.ceil(randomNumber)
@@ -35,8 +35,9 @@ for(let i=0; i<=3; i++){
         }
         
 
-
-        players[i].score =players[i].score + randomNumber
+        if (players[i].score + randomNumber <=100){
+            players[i].score =players[i].score + randomNumber
+        }
         btn.textContent = players[i].name +" " + players[i].score
 
 

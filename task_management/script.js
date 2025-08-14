@@ -1,45 +1,49 @@
-friends = []
+let friends = [];
 
-let heading = document.createElement("h1")
-heading.textContent = "Task Management"
-document.body.appendChild(heading)
+let heading = document.createElement("h1");
+heading.textContent = "Task Management";
+document.body.appendChild(heading);
 
-let userInput = document.createElement("input")
-userInput.id = "input"
-document.body.appendChild(userInput)
+let userInput = document.createElement("input");
+userInput.id = "input";
+document.body.appendChild(userInput);
 
+let addBtn = document.createElement("button");
+addBtn.textContent = "Add";
+addBtn.classList = "btn";
+document.body.appendChild(addBtn);
 
+let container = document.createElement("div");
+document.body.appendChild(container);
 
-let addBtn = document.createElement("button")
-addBtn.textContent = "Add"
-addBtn.classList = "btn"
-addBtn.onclick = ()=>{
-    let currentName = document.getElementById("input").value
-    friends.push(currentName)
-    console.log(friends)
-    document.getElementById("input").value=""
-    container.innerHTML=""
+function renderList() {
+    container.innerHTML = "";
+    let ul = document.createElement("ul");
 
-    for(let eachName of friends){
-    let friend = document.createElement("li")
-    friend.textContent = eachName + " " +  "delete" 
+    for (let eachName of friends) {
+        let li = document.createElement("li");
+        li.textContent = eachName + " ";
 
-    friend.onclick=()=>{
-        friend.splice(friends.indexOf(eachName),1)
-        container.innerHTML=""
-        // for(let eachName of friend){
-        //     let friend = document.createElement("li")
-        //     friend.textContent = eachName + " " + "delete"
-        // }
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = () => {
+            friends.splice(friends.indexOf(eachName), 1); // Remove from array
+            renderList(); // Re-render
+        };
+
+        li.appendChild(deleteBtn);
+        ul.appendChild(li);
     }
 
-    container.appendChild(friend)
+    container.appendChild(ul);
 }
 
-}
-document.body.appendChild(addBtn)
-
-
-let container = document.createElement("div")
-
-document.body.appendChild(container)
+addBtn.onclick = () => {
+    let currentName = document.getElementById("input").value.trim();
+    if (currentName) {
+        friends.push(currentName);
+        console.log(friends);
+        document.getElementById("input").value = "";
+        renderList();
+    }
+};

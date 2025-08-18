@@ -11,4 +11,4 @@ function green(){
 function red(){
     let redButton = document.querySelector("body");
     redButton.style.backgroundColor = "red";
-}
+}   

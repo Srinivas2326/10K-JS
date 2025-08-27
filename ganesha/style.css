@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+  background: #050914;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: gold;
+  text-shadow: 0 0 10px orange, 0 0 20px red;
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 16px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 5px #ff8800;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: gold;
+  color: black;
+}
+
+#ganeshaCanvas {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid gold;
+  background: #050914;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+#status {
+  font-size: 18px;
+  margin-top: 10px;
+  color: lightgreen;
+  font-weight: bold;
+}

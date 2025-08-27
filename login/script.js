@@ -25,12 +25,16 @@
    function verifying(){
     let userName = document.getElementById("username").value;
     let passWord = document.getElementById("password").value;
-    if (userName=="srinivas" && passWord=="12345"){
+    if (userName=="srinivas" && passWord=="srinivas"){
         document.querySelector("h3").innerText="Login Successful";
         document.querySelector("h3").style.color="green";
         document.getElementById("login").style.textAlign="center";
         document.querySelector(".message").textContent = alert("Welcome " + userName);
-        document.querySelector(".main").textContent="You succefully looged into your account!"
+        document.body.textContent = "You Successfully Logged In";
+        document.body.style.color = "green";
+        document.body.style.fontSize="2rem"
+        document.body.style.textAlign="center"
+
     }
     else{
         document.querySelector("h3").innerText = "Login Failed";

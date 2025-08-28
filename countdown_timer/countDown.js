@@ -5,10 +5,9 @@ const resetButton = document.getElementById("resetBtn");
 const timerDisplay = document.getElementById("timerDisplay");
 
 let myCountDown;
-let seconds;   // total countdown seconds
-let initialSeconds; // for reset
+let seconds;   
+let initialSeconds;
 
-// Start countdown
 startButton.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -35,13 +34,11 @@ startButton.addEventListener("click", (e) => {
     }, 1000);
 });
 
-// Stop countdown
 stopButton.addEventListener("click", () => {
     clearInterval(myCountDown);
     timerDisplay.textContent = "Stopped";
 });
 
-// Reset countdown
 resetButton.addEventListener("click", () => {
     clearInterval(myCountDown);
     seconds = initialSeconds;
@@ -52,7 +49,6 @@ resetButton.addEventListener("click", () => {
     }
 });
 
-// Helper function to update timer display
 function updateDisplay(sec) {
     const minutes = Math.floor(sec / 60);
     const remainingSeconds = sec % 60;

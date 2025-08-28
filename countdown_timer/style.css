@@ -61,7 +61,6 @@ button {
     transition: 0.3s;
 }
 
-/* Start */
 #countDown {
     background: #ff6b6b;
 }
@@ -70,7 +69,6 @@ button {
     transform: scale(1.05);
 }
 
-/* Stop */
 #stopBtn {
     background: #1e90ff;
 }
@@ -79,7 +77,6 @@ button {
     transform: scale(1.05);
 }
 
-/* Reset */
 #resetBtn {
     background: #2ed573;
 }

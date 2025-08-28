@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Countdown Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>COUNTDOWN TIMER</h1>
         <input type="number" id="input" placeholder="Enter seconds">
-        <button id="countDown">Start</button>
+        
+        <div class="btn-group">
+            <button id="countDown">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
         <h2 id="timerDisplay">00:00</h2>
     </div>
-
 
     <script src="countDown.js"></script>
 </body>

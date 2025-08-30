@@ -1,25 +1,20 @@
-// 🎯 Create main container (game area with board + players)
 let gameArea = document.createElement("div");
 gameArea.classList = "game-area";
 document.body.appendChild(gameArea);
 
-// 🎯 Heading
 let h1 = document.createElement("h1");
 h1.innerText = "Snake and Ladder";
 h1.classList = "heading";
 document.body.insertBefore(h1, gameArea);
 
-// 🎯 Board container
 let container = document.createElement("div");
 container.classList = "container";
 gameArea.appendChild(container);
 
-// 🎯 Players panel
 let playersPanel = document.createElement("div");
 playersPanel.classList = "players";
 gameArea.appendChild(playersPanel);
 
-// 🎯 Create 100 cells for the board
 for (let i = 100; i >= 1; i--) {
     let divContainer = document.createElement("div");
     divContainer.classList = "cell";
@@ -28,7 +23,6 @@ for (let i = 100; i >= 1; i--) {
     container.appendChild(divContainer);
 }
 
-// 🎯 Players data
 let players = [
     { name: "srinivas", color: "blue", score: 0 },
     { name: "shekar", color: "red", score: 0 },
@@ -36,7 +30,6 @@ let players = [
     { name: "hemanth", color: "yellow", score: 0 }
 ];
 
-// 🎯 Create player buttons inside players panel
 for (let i = 0; i < players.length; i++) {
     let btn = document.createElement("button");
     btn.classList = "player-btn";
@@ -46,19 +39,16 @@ for (let i = 0; i < players.length; i++) {
     btn.onclick = function () {
         let randomNumber = Math.ceil(Math.random() * 6);
 
-        // Remove old token
         let currentPerson = document.getElementById(`person${players[i].name}`);
         if (currentPerson) {
             currentPerson.parentNode.removeChild(currentPerson);
         }
 
-        // Update score (max 100)
         if (players[i].score + randomNumber <= 100) {
             players[i].score += randomNumber;
         }
         btn.textContent = players[i].name + " " + players[i].score;
 
-        // Add new token
         let person = document.createElement("div");
         person.classList = "person";
         person.id = `person${players[i].name}`;

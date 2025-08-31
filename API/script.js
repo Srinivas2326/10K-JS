@@ -1,55 +1,100 @@
-let user_container = document.getElementById("userData");
 
-// ✅ Fetch todos
-fetch("https://jsonplaceholder.typicode.com/todos")
-  .then((response) => response.json())
-  .then((jsondata) => {
-    console.log("Todos:", jsondata);
-    for (let i = 0; i < 5; i++) { // show only first 5
-      let card = document.createElement("div");
-      card.className = "card";
+let user_container = document.getElementById("userdata")
 
-      card.innerHTML = `
-          <p><b>ID:</b> ${jsondata[i].id}</p>
-          <p><b>Title:</b> ${jsondata[i].title}</p>
-          <p><b>Completed:</b> ${jsondata[i].completed}</p>
-      `;
 
-      user_container.appendChild(card);
-    }
-  });
+fetch("https://gorest.co.in/public/v2/users",{
+  method: "GET",
+    headers:{
+      Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
+    },
+})
+.then(function(response){
+  return response.json()
+})
+.then(function(jsondata){
+  console.log(jsondata)
+  for(let i=0; i<jsondata.length; i++){
+    let card = document.createElement("div")
+    card.classList="card"
+    card.innerHTML=`
+        <p>${jsondata[i].id}</p>
+        <p>${jsondata[i].name}</p>
+        <p>${jsondata[i].email}</p>
+        <p>${jsondata[i].gender}</p>
+        
+    `
+    user_container.appendChild(card)
+  }
+})
 
-// ✅ User data to post
+
+
+
+// let user = {
+//       name : "srinu",
+//       email: "srinu@gmail.com",
+//       gender: "male",
+//       status: "active"
+//     }
+
+
+
+// fetch("https://gorest.co.in/public/v2/users",
+//   {
+//     method: "POST",
+//     headers:{
+//       "Content-type":"application/json",
+//       Accept: "application/json",
+//       Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
+//     },
+//     body: JSON.stringify(user)
+//   })
+
+//   .then(function(res){
+// return res.json()
+//   })
+
+// .then(function(jsondata){
+//   console.log(jsondata)
+// })
+
+// ___________________________________________________________________________________
+
+// how to delete a user
+
+// fetch("https://gorest.co.in/public/v2/users/8098990",{
+//   method:"DELETE",
+//   headers:{
+//     Accept: "application/json",
+//     Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
+//   }
+// })
+// .then(function(res){
+//   console.log(res)
+// })
+
+
+
+// UPDATE DATA
+
 let user = {
-  name: "srinivas",
-  email: "srinu" + Date.now() + "@gmail.com", // unique email each time
-  gender: "male",
-  status: "active",
-};
+      email: "srinu2307@gmail.com",
+      
+    }
 
-// ✅ POST request to GoRest
-fetch("https://gorest.co.in/public/v2/users", {
-  method: "POST",
-  headers: {
+
+fetch("https://gorest.co.in/public/v2/users/8099008",{
+  method:"PUT",
+  body: JSON.stringify(user),
+  headers:{
     "Content-type": "application/json",
     Accept: "application/json",
-    Authorization: "",
-  },
-  body: JSON.stringify(user),
+    Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872",
+  }
 })
-  .then((res) => res.json())
-  .then((jsondata) => {
-    console.log("Created User:", jsondata);
-
-    let card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-        <h3>New User Created</h3>
-        <p><b>ID:</b> ${jsondata.id}</p>
-        <p><b>Name:</b> ${jsondata.name}</p>
-        <p><b>Email:</b> ${jsondata.email}</p>
-        <p><b>Gender:</b> ${jsondata.gender}</p>
-        <p><b>Status:</b> ${jsondata.status}</p>
-    `;
-    user_container.appendChild(card);
-  });
+.then(function(res){
+  return res.json()
+})
+.then(function(jsondata){
+  console.log(jsondata)
+})

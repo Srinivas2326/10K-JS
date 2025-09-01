@@ -19,8 +19,9 @@ function fetchUsers() {
           <p>${user.name}</p>
           <p>${user.email}</p>
           <p>${user.gender}</p>
+          <p>${user.status}</p>
           <button onclick="deleteUser(${user.id})">Delete</button>
-          <button onclick="showUpdateForm(${user.id}, '${user.name}', '${user.email}', '${user.gender}')">Update</button>
+          <button onclick="showUpdateForm(${user.id}, '${user.name}', '${user.email}', '${user.gender}','${user.status}')">Update</button>
         `;
         user_container.appendChild(card);
       });
@@ -71,6 +72,10 @@ function showUpdateForm(id, name, email, gender) {
         <option value="male" ${gender === "male" ? "selected" : ""}>Male</option>
         <option value="female" ${gender === "female" ? "selected" : ""}>Female</option>
       </select>
+      <select id="updateStatus${id}" required>
+        <option value="Active" ${gender === "Active" ? "selected" : ""}>Active</option>
+        <option value="Inactive" ${gender === "Inactive" ? "selected" : ""}>Inactive</option>
+      </select>
       <button type="submit">Save</button>
       <button type="button" onclick="fetchUsers()">Cancel</button>
     </form>
@@ -84,7 +89,7 @@ function updateUser(e, id) {
     name: document.getElementById(`updateName${id}`).value,
     email: document.getElementById(`updateEmail${id}`).value,
     gender: document.getElementById(`updateGender${id}`).value,
-    status: "active"
+    status: document.getElementById(`updateStatus${id}`).value,
   };
 
   fetch(`https://gorest.co.in/public/v2/users/${id}`, {

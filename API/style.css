@@ -79,60 +79,44 @@ h1 {
   text-transform: capitalize;
 }
 
-/* Buttons inside each card */
-.card-buttons {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.card-buttons button {
-  flex: 1;
-  padding: 8px 12px;
+button {
+  margin: 5px 5px 0 0;
+  padding: 8px 16px;
   border: none;
   border-radius: 20px;
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  color: white;
   font-size: 0.9rem;
-  cursor: pointer;
-  color: white;
   font-weight: bold;
-  background: linear-gradient(135deg, #42a5f5, #1e88e5);
-  transition: all 0.3s ease-in-out;
-}
-
-.card-buttons button:hover {
-  background: linear-gradient(135deg, #1e88e5, #1565c0);
-}
-
-/* Add button fixed separately */
-.button-container {
-  position: fixed;
-  right: 20px;
-  bottom: 50px;
-}
-
-button {
-  margin: 15px 10px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #42a5f5, #1e88e5);
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 button:hover {
   background: linear-gradient(135deg, #1e88e5, #1565c0);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
 }
 
-button:active {
-  transform: translateY(0px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.form-container {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
 }

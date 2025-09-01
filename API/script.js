@@ -32,40 +32,41 @@ fetch("https://gorest.co.in/public/v2/users",{
 
 
 // To add new data
-// function addUser(){
-// let user = {
-//       name : "sriinu",
-//       email: "sriinu@gmail.com",
-//       gender: "female",
-//       status: "active"
-//     }
+
+function addUser(){
+let user = {
+      name : "srinuivas",
+      email: "srinuivas@gmail.com",
+      gender: "male",
+      status: "active"
+    }
 
 
-// fetch("https://gorest.co.in/public/v2/users",
-//   {
-//     method: "POST",
-//     headers:{
-//       "Content-type":"application/json",
-//       Accept: "application/json",
-//       Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
-//     },
-//     body: JSON.stringify(user)
-//   })
+fetch("https://gorest.co.in/public/v2/users",
+  {
+    method: "POST",
+    headers:{
+      "Content-type":"application/json",
+      Accept: "application/json",
+      Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
+    },
+    body: JSON.stringify(user)
+  })
 
-//   .then(function(res){
-// return res.json()
-//   })
+  .then(function(res){
+return res.json()
+  })
 
-// .then(function(jsondata){
-//   console.log(jsondata)
-// })
-// }
+.then(function(jsondata){
+  console.log(jsondata)
+})
+}
 // ___________________________________________________________________________________
 
 // how to delete a user
 
 function deleteUser(){
-fetch("https://gorest.co.in/public/v2/users/8099776",{
+fetch("https://gorest.co.in/public/v2/users/8099696",{
   method:"DELETE",
   headers:{
     Accept: "application/json",
@@ -81,33 +82,35 @@ fetch("https://gorest.co.in/public/v2/users/8099776",{
 
 // UPDATE DATA
 
-// function updateUser(){
-// let user = {
-//       gender:"male"
+function updateUser(){
+let user = {
+      gender:"male",
+      name:"srinivasPeddada",
+      email:"srinivas1234peddada@gmail.com"
       
-//     }
+    }
 
 
-// fetch("https://gorest.co.in/public/v2/users/8099776",{
-//   method:"PUT",
-//   body: JSON.stringify(user),
-//   headers:{
-//     "Content-type": "application/json",
-//     Accept: "application/json",
-//     Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872",
-//   }
-// })
-// .then(function(res){
-//   return res.json()
-// })
-// .then(function(jsondata){
-//   console.log(jsondata)
-// })
-// }
+fetch("https://gorest.co.in/public/v2/users/8099810",{
+  method:"PUT",
+  body: JSON.stringify(user),
+  headers:{
+    "Content-type": "application/json",
+    Accept: "application/json",
+    Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872",
+  }
+})
+.then(function(res){
+  return res.json()
+})
+.then(function(jsondata){
+  console.log(jsondata)
+})
+}
 
 
 
 
-// addBtn.addEventListener("click", addUser)
+addBtn.addEventListener("click", addUser)
 deleteBtn.addEventListener("click", deleteUser)
-// updateBtn.addEventListener("click", updateUser)
+updateBtn.addEventListener("click", updateUser)

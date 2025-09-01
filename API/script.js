@@ -30,32 +30,32 @@ fetch("https://gorest.co.in/public/v2/users",{
 
 // To add new data
 
-// let user = {
-//       name : "Jaan",
-//       email: "Jaan@gmail.com",
-//       gender: "female",
-//       status: "active"
-//     }
+let user = {
+      name : "Jaanu",
+      email: "Jaanu@gmail.com",
+      gender: "female",
+      status: "active"
+    }
 
 
-// fetch("https://gorest.co.in/public/v2/users",
-//   {
-//     method: "POST",
-//     headers:{
-//       "Content-type":"application/json",
-//       Accept: "application/json",
-//       Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
-//     },
-//     body: JSON.stringify(user)
-//   })
+fetch("https://gorest.co.in/public/v2/users",
+  {
+    method: "POST",
+    headers:{
+      "Content-type":"application/json",
+      Accept: "application/json",
+      Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872"
+    },
+    body: JSON.stringify(user)
+  })
 
-//   .then(function(res){
-// return res.json()
-//   })
+  .then(function(res){
+return res.json()
+  })
 
-// .then(function(jsondata){
-//   console.log(jsondata)
-// })
+.then(function(jsondata){
+  console.log(jsondata)
+})
 
 // ___________________________________________________________________________________
 
@@ -76,24 +76,24 @@ fetch("https://gorest.co.in/public/v2/users",{
 
 // UPDATE DATA
 
-let user = {
-      gender:"female"
+// let user = {
+//       gender:"female"
       
-    }
+//     }
 
 
-fetch("https://gorest.co.in/public/v2/users/8099585",{
-  method:"PUT",
-  body: JSON.stringify(user),
-  headers:{
-    "Content-type": "application/json",
-    Accept: "application/json",
-    Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872",
-  }
-})
-.then(function(res){
-  return res.json()
-})
-.then(function(jsondata){
-  console.log(jsondata)
-})
+// fetch("https://gorest.co.in/public/v2/users/8099585",{
+//   method:"PUT",
+//   body: JSON.stringify(user),
+//   headers:{
+//     "Content-type": "application/json",
+//     Accept: "application/json",
+//     Authorization: "Bearer 35f70ed1edc2922a5711e9ec54249cc62fee316524ff00c7dc87130f94838872",
+//   }
+// })
+// .then(function(res){
+//   return res.json()
+// })
+// .then(function(jsondata){
+//   console.log(jsondata)
+// })

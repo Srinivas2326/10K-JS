@@ -28,15 +28,14 @@ fetch("https://gorest.co.in/public/v2/users",{
 })
 
 
-
+// To add new data
 
 // let user = {
-//       name : "srinu",
-//       email: "srinu@gmail.com",
-//       gender: "male",
+//       name : "Jaan",
+//       email: "Jaan@gmail.com",
+//       gender: "female",
 //       status: "active"
 //     }
-
 
 
 // fetch("https://gorest.co.in/public/v2/users",
@@ -62,7 +61,7 @@ fetch("https://gorest.co.in/public/v2/users",{
 
 // how to delete a user
 
-// fetch("https://gorest.co.in/public/v2/users/8098990",{
+// fetch("https://gorest.co.in/public/v2/users/8099584",{
 //   method:"DELETE",
 //   headers:{
 //     Accept: "application/json",
@@ -73,17 +72,17 @@ fetch("https://gorest.co.in/public/v2/users",{
 //   console.log(res)
 // })
 
-
+// ______________________________________________________________________________________________________________________
 
 // UPDATE DATA
 
 let user = {
-      email: "srinu2307@gmail.com",
+      gender:"female"
       
     }
 
 
-fetch("https://gorest.co.in/public/v2/users/8099008",{
+fetch("https://gorest.co.in/public/v2/users/8099585",{
   method:"PUT",
   body: JSON.stringify(user),
   headers:{

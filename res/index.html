@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="welcome-screen" class="screen active">
+    <h1>Welcome to SS Restaurant 🍴</h1>
+    <button onclick="goToMenuChoice()">Enter</button>
+  </section>
+
+  <section id="menu-choice" class="screen">
+    <h2>Choose Your Menu</h2>
+    <button onclick="showMenu('veg')">Veg Menu 🥦</button>
+    <button onclick="showMenu('nonveg')">Non-Veg Menu 🍗</button>
+    <br>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </section>
+
+  <section id="veg-menu" class="screen">
+    <h2>Veg Menu 🥦</h2>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="placeOrder('Paneer Butter Masala')">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.6Tq7zFCCMwYDCmPr27xlIwHaHa?pid=Api&P=0&h=220" alt="Paneer Butter Masala">
+        <p>Paneer Butter Masala</p>
+      </div>
+      <div class="menu-item" onclick="placeOrder('Veg Biryani')">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.RkCl2QbBk6htAMvhwZswVgHaE8?pid=Api&P=0&h=220" alt="Veg Biryani">
+        <p>Veg Biryani</p>
+      </div>
+      <div class="menu-item" onclick="placeOrder('Aloo Gobi')">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.SuZ8eN8ADfv4Ie8wXAAn3wHaJl?pid=Api&P=0&h=220" alt="Aloo Gobi">
+        <p>Aloo Gobi</p>
+      </div>
+    </div>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </section>
+
+
+  <section id="nonveg-menu" class="screen">
+    <h2>Non-Veg Menu 🍗</h2>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="placeOrder('Chicken Biryani')">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.3xOblPc3grpXf5oeNwXSxAHaHa?pid=Api&P=0&h=220" alt="Chicken Biryani">
+        <p>Chicken Biryani</p>
+      </div>
+      <div class="menu-item" onclick="placeOrder('Mutton Curry')">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.aGzAWe7tdWBCN9-Z6GJMIQHaHa?pid=Api&P=0&h=220" alt="Mutton Curry">
+        <p>Mutton Curry</p>
+      </div>
+      <div class="menu-item" onclick="placeOrder('Fish Fry')">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Kn4wigV0swo8pDzYeMDAvwHaFH?pid=Api&P=0&h=220" alt="Fish Fry">
+        <p>Fish Fry</p>
+      </div>
+    </div>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </section>
+
+  <section id="order-details" class="screen">
+    <h2>Order Details ✅</h2>
+    <p id="order-text"></p>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

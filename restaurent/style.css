@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("resto_imgs/Background2.png");
+    background-size: cover;
+    background-position: center;
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    padding: 0px 100px 0px 50px;
+    height:70px;
+    align-items: center;
+}
+.links{
+    display: flex;
+    list-style: none;
+    gap:40px;
+}
+
+.nav-1{
+    display:flex;
+    align-items: center;
+    gap:120px;
+}
+
+.logo{
+    color:orange;
+    font-size:30px;
+    font-weight:600;
+}
+
+.links li{
+    font-size: 19px;
+    color:orange;
+}
+
+.icons{
+    display: flex;
+    gap:20px;
+    color:black;
+}
+
+.icons i{
+    font-size:25px;
+}

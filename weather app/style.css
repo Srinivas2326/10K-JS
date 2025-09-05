@@ -32,6 +32,16 @@ body {
   transform: translateY(-8px);
 }
 
+/* Title */
+.app-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  letter-spacing: 1px;
+}
+
 /* Search */
 .search {
   display: flex;
@@ -80,12 +90,10 @@ body {
   margin: 20px 0;
   animation: float 3s infinite ease-in-out;
 }
-
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
-
 .weather h1 {
   font-size: 65px;
   font-weight: 600;

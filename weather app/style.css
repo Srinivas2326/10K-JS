@@ -1,0 +1,133 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Search */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.search input {
+  flex: 1;
+  height: 55px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.search input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 234, 0.7);
+}
+.search button {
+  border: none;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: transform 0.2s ease;
+}
+.search button:hover {
+  transform: scale(1.1);
+}
+.search button img {
+  width: 20px;
+}
+
+/* Weather */
+.weather-icon {
+  width: 150px;
+  margin: 20px 0;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.weather h1 {
+  font-size: 65px;
+  font-weight: 600;
+  text-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+}
+.weather h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 5px 0 15px;
+  color: #eaeaea;
+}
+
+/* Details */
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+.col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.col img {
+  width: 35px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.4));
+}
+.humidity, .wind {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Error */
+.error {
+  display: none;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 8px 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  color: #ff4d4d;
+  font-size: 14px;
+}

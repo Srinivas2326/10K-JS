@@ -1,40 +1,55 @@
+const inputBox = document.getElementById("input");
+const listContainer = document.getElementById("todo-list");
+const addBtn = document.getElementById("addBtn");
 
-const inputbox = document.getElementById('input-box');
-const listContainer = document.getElementById('list-container');
-
-function addTask(){
-    if (inputbox.value.trim() === ''){
-        alert('Please enter an item');
+// Add Task
+function add() {
+    if (inputBox.value.trim() === "") {
+        alert("You must write something!");
     } else {
-        let li = document.createElement('li');
-        li.innerHTML = inputbox.value;
-        listContainer.appendChild(li);
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
 
-        let span = document.createElement('span');
-        span.classList.add('closebut');
-        span.innerHTML = '\u00d7';
+        // Close button
+        let span = document.createElement("span");
+        span.classList.add("closeBtn");
+        span.innerHTML = "\u00d7"; // × symbol
         li.appendChild(span);
+
+        listContainer.appendChild(li);
     }
-    inputbox.value = '';
+    inputBox.value = "";
     saveData();
 }
 
-listContainer.addEventListener('click', function(e){
-    if(e.target.tagName === 'LI'){
-        e.target.classList.toggle('checked');
+// Handle task check/remove
+listContainer.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
         saveData();
-    }
-    else if(e.target.tagName === 'SPAN'){
+    } else if (e.target.classList.contains("closeBtn")) {
         e.target.parentElement.remove();
         saveData();
     }
 }, false);
 
-function saveData(){
-    localStorage.setItem('data', listContainer.innerHTML);
+// Save tasks to localStorage
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
 }
 
-function showTask(){
-    listContainer.innerHTML = localStorage.getItem('data') || "";
+// Load tasks on page load
+function showTask() {
+    listContainer.innerHTML = localStorage.getItem("data") || "";
 }
 showTask();
+
+// Add button event
+addBtn.addEventListener("click", add);
+
+// Enter key support
+inputBox.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        add();
+    }
+});

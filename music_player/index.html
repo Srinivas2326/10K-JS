@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music-Player</title>
+    <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e02a3fdad5.js" crossorigin="anonymous"></script>
 </head>
@@ -11,31 +11,27 @@
     <div class="container">
         <div class="music-player">
             <nav>
-                <div class="circle">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="circle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+                <div class="circle" id="prev"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="circle"><i class="fa-solid fa-bars"></i></div>
+                <div class="circle" id="next"><i class="fa-solid fa-angle-right"></i></div>
             </nav>
-            <img src="./468-thumbnail.png" class="song-img">
-            <h1>Despacito</h1>
-            <p>Luis Fonsi Ft. Puerto Rican</p>
 
-            <audio  id="song">
-                <source src="./songs/daddy-yankee-justin-bieber-luis-fonsi-despacito.mp3" type="audio/mpeg">
-            </audio>
+            <img src="" class="song-img" id="songImg">
+            <h1 id="songTitle">Loading...</h1>
+            <p id="songArtist">Please wait</p>
+
+            <p id="songCount">Loading songs...</p>
+
+            <audio id="song"></audio>
             <input type="range" value="0" id="progress">
 
             <div class="controls">
-                <div><i class="fa-solid fa-backward"></i></div>
+                <div id="prevControl"><i class="fa-solid fa-backward"></i></div>
                 <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
-                <div><i class="fa-solid fa-forward"></i></div>
+                <div id="nextControl"><i class="fa-solid fa-forward"></i></div>
             </div>
         </div>
     </div>
-
-
 
     <script src="script.js"></script>
 </body>

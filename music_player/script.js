@@ -26,10 +26,10 @@ let songs = [
         img: "https://tse1.mm.bing.net/th/id/OIP.0rUu281DnYwsFJ0K2L2r_AHaEK?pid=Api&P=0&h=220"
     },
     {
-        title: "Love me Like You Do",
-        artist: "Ed Sheeran",
-        src: "./songs/Ellie_Goulding_-_Love_Me_Like_You_Do_ScaryBeatz.com.mp3",
-        img: "https://tse1.mm.bing.net/th/id/OIP.0rUu281DnYwsFJ0K2L2r_AHaEK?pid=Api&P=0&h=220"
+        title: "Middle Of The Night",
+        artist: "Elley Duhé",
+        src: "./songs/Elley_Duh_-_Middle_Of_The_Night_CeeNaija.com_.mp3",
+        img: "https://tse3.mm.bing.net/th/id/OIP.RTQdqMLlOay4PdIGRFe64wHaHa?pid=Api&P=0&h=220"
     }
 ];
 
